@@ -10,7 +10,6 @@
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  box-sizing: border-box;
 }
 
 .header-main {
@@ -33,7 +32,7 @@ li {
 }
 
 .release-section-list {
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding-bottom: 0.2rem;
 }
 
@@ -48,9 +47,18 @@ li {
   line-height: 0;
 }
 
+.flex-test {
+  display: flex;
+  align-items: flex-end;
+}
+
+.div-test {
+  padding-left: 1rem;
+}
+
 .thumbnail {
-  width: 20px;
-  height: 20px;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
 }
 
