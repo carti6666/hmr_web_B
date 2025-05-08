@@ -68,13 +68,6 @@ a {
   }
 }
 
-/* 모바일 환경에서 원본 이미지 기본 숨김 */
-@media (max-width: 480px) {
-  .original-image {
-    width: 200px !important;
-  }
-}
-
 /* 클릭 시 원본 이미지 표시 (모바일) */
 .cover-container.active .original-image {
   display: block;
