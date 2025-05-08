@@ -1,163 +1,38 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hmr</title>
-    <link href='./style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹페이지 제목</title>
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="container header-main">
-        <span href="./index.html" class="header-label data-href">hustle muscle records</span>
+
+    <header>
+        hustle muscle records
     </header>
 
-    <main class="container">
-        <div class="flex-test">
-            <div class="cover-container">
-                <img class="thumbnail" src="./src/img_300.png" alt="cf-cover">
-                <img class="original-image" src="./src/img_300.png" alt="cf-cover">
-            </div>
-            <div class="div-test">
-            <a href="./release/cf.html" class="data-href">cf (cheap food)</a><br>
-            <span>by </span><a href="./artist/easymind.html" class="data-href">Easymind</a> |
-            experimental-hiphop | <span class="time" data-timestamp="2006-02-07T10:00:00Z"></span> |
-            <a href="https://open.spotify.com/track/6TNcMPyG31TeFiJrXKsF1V?si=1262f93a83b7418f"
-                class="data-href-outlink">↗&#xFE0E;</a>
-            </div>
-        </div>
-
-
-<!--
-        <li class="release-section-list">
-            <div>
-                <div class="cover-container">
-                    <img class="thumbnail" src="./src/img_300.png" alt="cf-cover">
-                    <img class="original-image" src="./src/img_300.png" alt="cf-cover">
-                </div>
-                <a href="./release/cf.html" class="data-href">cf (cheap food)</a>
-            </div>
-        </li>
-
-        <li class="release-section-info">
-            <span id="number-padding">by </span><a href="./artist/easymind.html" class="data-href">Easymind</a> |
-            experimental-hiphop | <span class="time" data-timestamp="2006-02-07T10:00:00Z"></span> |
-            <a href="https://open.spotify.com/track/6TNcMPyG31TeFiJrXKsF1V?si=1262f93a83b7418f"
-                class="data-href-outlink">↗&#xFE0E;</a>
-        </li>
-
-
-        <li class="release-section-list">
-            <div>
-                <div class="cover-container">
-                    <img class="thumbnail" src="./src/img_300.png" alt="cf-cover">
-                    <img class="original-image" src="./src/img_300.png" alt="cf-cover">
-                </div>
-                <a href="" class="data-href">Anguilla Electrica</a>
-            </div>
-        </li>
-
-        <li class="release-section-info">
-            <span id="number-padding">by </span><a href="" class="data-href">Porter Ricks</a> |
-            Shoal Beat | <span class="time" data-timestamp="2006-02-07T10:00:00Z"></span> |
-            <a href="" class="data-href-outlink">↗&#xFE0E;</a>
-        </li>
-
-        <li class="release-section-list">
-            <div>
-                <div class="cover-container">
-                    <img class="thumbnail" src="./src/img_300.png" alt="cf-cover">
-                    <img class="original-image" src="./src/img_300.png" alt="cf-cover">
-                </div>
-                <a href="" class="data-href">Untitled</a>
-            </div>
-        </li>
-
-        <li class="release-section-info">
-            <span id="number-padding">by </span><a href="" class="data-href">Huerco S.</a> |
-            Press On (Ruff Rub) | <span class="time" data-timestamp="2006-02-07T10:00:00Z"></span> |
-            <a href="" class="data-href-outlink">↗&#xFE0E;</a>
-        </li>
-
-        <li class="release-section-list">
-            <div>
-                <div class="cover-container">
-                    <img class="thumbnail" src="./src/img_300.png" alt="cf-cover">
-                    <img class="original-image" src="./src/img_300.png" alt="cf-cover">
-                </div>
-                <a href="" class="data-href">Oderbruch</a>
-            </div>
-        </li>
-
-        <li class="release-section-info">
-            <span id="number-padding">by </span><a href="" class="data-href">Shed</a> |
-            Das Bruch | <span class="time" data-timestamp="2006-02-07T10:00:00Z"></span> |
-            <a href="" class="data-href-outlink">↗&#xFE0E;</a>
-        </li>
-
-        <li class="release-section-list">
-            <div>
-                <div class="cover-container">
-                    <img class="thumbnail" src="./src/img_300.png" alt="cf-cover">
-                    <img class="original-image" src="./src/img_300.png" alt="cf-cover">
-                </div>
-                <a href="" class="data-href">Colonial Patterns</a>
-            </div>
-        </li>
-
-        <li class="release-section-info">
-            <span id="number-padding">by </span><a href="" class="data-href">Land of the Loops</a> |
-            Bundle of Joy | <span class="time" data-timestamp="2006-02-07T10:00:00Z"></span> |
-            <a href="" class="data-href-outlink">↗&#xFE0E;</a>
-        </li>
-
-        <li class="release-section-list">
-            <div>
-                <div class="cover-container">
-                    <img class="thumbnail" src="./src/img_300.png" alt="cf-cover">
-                    <img class="original-image" src="./src/img_300.png" alt="cf-cover">
-                </div>
-                <a href="" class="data-href">Multi-Family Garage</a>
-            </div>
-        </li>
-
-        <li class="release-section-info">
-            <span id="number-padding">by </span><a href="" class="data-href">Rich Boy, Trina</a> |
-            www.thug.com | <span class="time" data-timestamp="2006-02-07T10:00:00Z"></span> |
-            <a href="" class="data-href-outlink">↗&#xFE0E;</a>
-        </li>
-
-        <li class="release-section-list">
-            <div>
-                <div class="cover-container">
-                    <img class="thumbnail" src="./src/img_300.png" alt="cf-cover">
-                    <img class="original-image" src="./src/img_300.png" alt="cf-cover">
-                </div>
-                <a href="" class="data-href">Loos In Twos (NRG)</a>
-            </div>
-        </li>
-
-        <li class="release-section-info">
-            <span id="number-padding">by </span><a href="" class="data-href">ANZ</a> |
-            Slide Thru | <span class="time" data-timestamp="2006-02-07T10:00:00Z"></span> |
-            <a href="" class="data-href-outlink">↗&#xFE0E;</a>
-        </li>
-        -->
+    <main>
+        <div class="space-20"></div>
+        <table>
+            <tr class="release-wrapper">
+                <td><img class="release-thumbnail" src="./src/img_300_b.png"></td>
+                <td><a href="">album-title</a><br>
+                    by <a href="">artist-name</a> | <span>genre</span> | <span>release-date</span> | <a href="">↗</a></td>
+            </tr>
+        </table>
+        <div class="space-20"></div>
     </main>
 
-    <footer class="container">
-        <hr>
-        <div>
-            <span href="./page/guidelines.html" class="data-href">Guidelines</span> | <span href="./page/contact.html"
-                class="data-href">Contact</span>
-        </div>
+    <footer>
+        footer
     </footer>
-
+    <script src="./main.js"></script>
 </body>
-<script defer type="text/javascript" src="./script.js"></script>
 
 </html>
