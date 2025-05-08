@@ -1,37 +1,62 @@
 :root {
   font-size: 12px;
-  line-height: 1.3rem;
+  font-weight: 450;
 }
 
 body {
   font-family: "Noto Sans KR", sans-serif;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
 }
 
-td,
-tr {
-  padding: 0;
+main {
+  display: flex;
   margin: 0;
+  flex-direction: row; /* 기본적으로 가로 방향 배치 */
+  flex-wrap: wrap; /* 내용이 넘치면 줄바꿈 */
 }
 
-.space-30 {
-  height: 30px;
+footer {
+  padding: 20px;
 }
 
-.space-20 {
-  height: 20px;
+.col-left {
+  padding: 20px;
+  order: 0;
 }
 
-.space-10 {
-  height: 10px;
+.col-right {
+  padding: 20px;
+  order: 1;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+.logo-text {
+  color: blue;
 }
 
-.logo {
-  max-height: 100px;
+/* 모바일 환경 (최대 너비 480px) */
+@media (max-width: 480px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  main {
+    flex-direction: column; /* 모바일에서 세로 방향 배치 */
+    flex-wrap: nowrap; /* 줄바꿈 방지 */
+  }
+
+  .col-left {
+    order: 0;
+    width: 100%;
+  }
+
+  .col-right {
+    order: 1;
+    width: 100%;
+  }
 }
 
 /** 이미지 (후버) 관련 **/
@@ -43,10 +68,9 @@ a {
 }
 
 .thumbnail {
-  width: 38px;
+  width: calc(1ex / 0.32);
   height: auto;
   cursor: pointer;
-  padding-right: 10px;
 }
 
 .original-image {
@@ -58,7 +82,7 @@ a {
   box-shadow: none;
   z-index: 10;
   top: 100%;
-  transform: translate(38px, 0);
+  transform: translate(18px, 0);
 }
 
 /* PC 환경에서 호버 시 원본 이미지 표시 */
@@ -68,43 +92,14 @@ a {
   }
 }
 
+/* 모바일 환경에서 원본 이미지 기본 숨김 */
+@media (max-width: 480px) {
+  .original-image {
+    width: 200px !important;
+  }
+}
+
 /* 클릭 시 원본 이미지 표시 (모바일) */
 .cover-container.active .original-image {
   display: block;
-}
-
-@media (min-width: 480px) {
-  .container {
-    max-width: 480px;
-  }
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1366px) {
-  .container {
-    max-width: 1366px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .container {
-    max-width: 1920px;
-  }
 }
