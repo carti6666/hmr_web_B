@@ -73,7 +73,7 @@ tr {
 }
 
 /* 모바일 환경: 원본 이미지 초기 숨김 및 클릭 시 표시/숨김 (JS 제어) */
-@media (max-width: 767px) {
+@media (max-width: 480px) {
   .release-original {
     display: none !important; /* 중요하게 숨김 */
   }

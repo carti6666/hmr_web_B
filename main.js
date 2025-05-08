@@ -64,7 +64,6 @@ document.addEventListener('DOMContentLoaded', () => {
           container.classList.toggle('active');
         });
   
-        // 다른 영역 클릭 시 열린 이미지 닫기 (선택 사항)
         document.addEventListener('click', (event) => {
           if (!container.contains(event.target)) {
             container.classList.remove('active');
