@@ -17,51 +17,13 @@ main {
   flex-wrap: wrap; /* 내용이 넘치면 줄바꿈 */
 }
 
-footer {
-  padding: 20px;
-}
-
-.col-left {
-  padding: 20px;
-  order: 0;
-}
-
+.col-left,
 .col-right {
   padding: 20px;
-  order: 1;
-}
-
-.td-left {
-  padding-left: 10px;
-}
-
-.logo-text {
-  color: blue;
-}
-
-table {
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-tr,
-td {
-  padding: 0;
-  margin: 0;
-}
-
-.styled-row td {
-  padding-bottom: 15px;
 }
 
 /* 모바일 환경 (최대 너비 480px) */
 @media (max-width: 480px) {
-  body {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-  }
-
   main {
     flex-direction: column; /* 모바일에서 세로 방향 배치 */
     flex-wrap: nowrap; /* 줄바꿈 방지 */
@@ -77,8 +39,37 @@ td {
     order: 1;
     width: 100%;
     padding: 4px;
-    background-color: gray;
   }
+}
+
+.logo-text {
+  color: blue;
+}
+
+/* release-table */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+tr,
+td {
+  padding: 0;
+  margin: 0;
+}
+
+.td-left {
+  padding-left: 10px;
+}
+
+/* footer */
+
+footer {
+  padding: 20px;
+}
+
+.styled-row td {
+  padding-bottom: 15px;
 }
 
 /** 이미지 (후버) 관련 **/
@@ -105,7 +96,12 @@ td {
   box-shadow: none;
   z-index: 10;
   top: 100%;
-  transform: translate(18px, 0);
+  transform: translate(14%, 0);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.cover-container.active .original-image {
+  display: block;
 }
 
 @media (hover: hover) {
@@ -118,8 +114,4 @@ td {
   .original-image {
     width: 200px !important;
   }
-}
-
-.cover-container.active .original-image {
-  display: block;
 }
