@@ -39,51 +39,48 @@ a {
   max-height: 100px;
 }
 
-.release-thumbnail {
-  display: block;
-  width: 38px;
-  height: 38px;
-  padding-right: 1rem;
-}
-
-.image-container {
+/** 이미지 (후버) 관련 **/
+.cover-container {
   position: relative;
   display: inline-block;
+  line-height: 0;
+  vertical-align: bottom;
 }
 
-.release-thumbnail {
-  display: block;
+.thumbnail {
   width: 38px;
-  height: 38px;
-  padding-right: 1rem;
+  height: auto;
   cursor: pointer;
+  padding-right: 10px;
 }
 
-.release-original {
+.original-image {
   display: none;
   position: absolute;
-  top: 0;
-  left: 0;
-  max-width: 300px;
+  width: 300px;
   height: auto;
+  border: none;
+  box-shadow: none;
   z-index: 10;
-  left: 85%;
+  top: 100%;
+  transform: translate(38px, 0);
 }
 
-/* PC 환경: 호버 시 원본 이미지 표시 */
+/* PC 환경에서 호버 시 원본 이미지 표시 */
 @media (hover: hover) {
-  .image-container:hover .release-original {
+  .cover-container:hover .original-image {
     display: block;
   }
 }
 
-/* 모바일 환경: 원본 이미지 초기 숨김 및 클릭 시 표시/숨김 (JS 제어) */
+/* 모바일 환경에서 원본 이미지 기본 숨김 */
 @media (max-width: 480px) {
-  .release-original {
-    display: none !important; /* 중요하게 숨김 */
+  .original-image {
+    width: 200px !important;
   }
+}
 
-  .image-container.active .release-original {
-    display: block !important; /* 클릭 시 표시 */
-  }
+/* 클릭 시 원본 이미지 표시 (모바일) */
+.cover-container.active .original-image {
+  display: block;
 }
