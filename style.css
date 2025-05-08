@@ -31,13 +31,16 @@ footer {
   order: 1;
 }
 
+.td-left {
+  padding-left: 4px;
+}
+
 .logo-text {
   color: blue;
 }
 
 table {
   border-collapse: separate;
-  border-spacing: 6px 0;
 }
 
 .styled-row td {
@@ -60,13 +63,13 @@ table {
   .col-left {
     order: 0;
     width: 100%;
-    padding: 8px;
+    padding: 4px;
   }
 
   .col-right {
     order: 1;
     width: 100%;
-    padding: 8px;
+    padding: 4px;
   }
 }
 
