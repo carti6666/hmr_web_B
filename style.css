@@ -7,11 +7,6 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 
-table {
-  border-collapse: separate; /* 테두리 분리 */
-  border-spacing: 0 10px; /* 가로 간격: 0, 세로 (행) 간격: 10px */
-}
-
 td,
 tr {
   padding: 0;
@@ -83,4 +78,40 @@ a {
 /* 클릭 시 원본 이미지 표시 (모바일) */
 .cover-container.active .original-image {
   display: block;
+}
+
+@media (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .container {
+    max-width: 1366px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+  }
 }
