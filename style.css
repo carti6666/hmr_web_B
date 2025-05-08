@@ -30,6 +30,11 @@ tr {
   height: 10px;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .logo {
   max-height: 100px;
 }
