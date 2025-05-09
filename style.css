@@ -3,6 +3,15 @@
   font-weight: 450;
 }
 
+div,
+td,
+tr,
+table,
+span {
+  border: solid 0.5px;
+  border-color: #000fff;
+}
+
 body {
   font-family: "Noto Sans KR", sans-serif;
   display: grid;
@@ -53,6 +62,10 @@ hr {
   height: 1px; /* 줄의 높이 (굵기) */
 }
 
+.footer-container {
+  padding: 20px;
+}
+
 /* 모바일 환경 (최대 너비 480px) */
 @media (max-width: 480px) {
   main {
@@ -87,8 +100,8 @@ hr {
     padding: 4px;
     padding-bottom: 20px;
   }
-
-  footer {
+  
+  .footer-container {
     padding: 4px;
   }
   
@@ -128,9 +141,6 @@ td {
 
 /* footer */
 
-footer {
-  padding: 20px;
-}
 
 .styled-row td {
   padding-bottom: 15px;
