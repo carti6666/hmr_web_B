@@ -36,14 +36,12 @@ main {
 .col-a,
 .col-b,
 .col-c {
-  padding: 20px;
-  padding-bottom: 20px;
+  padding: 20px
 }
 
 .col-d {
-  padding: 20px;
-  padding-bottom: 20px;
-  max-width: 400px;;
+  max-width: 400px;
+  padding: 20px
 }
 
 .ctemp {
@@ -63,7 +61,7 @@ hr {
 }
 
 .footer-container {
-  padding: 20px;
+  padding: 20px 0 0 20px;
 }
 
 /* 모바일 환경 (최대 너비 480px) */
@@ -76,33 +74,29 @@ hr {
   .col-a {
     order: 0;
     width: 100%;
-    padding: 4px;
-    padding-bottom: 20px;
+    padding: 10px 4px 5px 4px;
   }
 
   .col-b {
     order: 1;
     width: 100%;
-    padding: 4px;
-    padding-bottom: 20px;
+    padding: 10px 4px 5px 4px;
   }
   
   .col-c {
     order: 2;
     width: 100%;
-    padding: 4px;
-    padding-bottom: 20px;
+    padding: 10px 4px 5px 4px;
   }
 
   .col-d {
     order: 3;
     width: 100%;
-    padding: 4px;
-    padding-bottom: 20px;
+    padding: 10px 4px 5px 4px;
   }
 
   .footer-container {
-    padding: 4px;
+    padding: 10px 4px 5px 4px;
   }
   
 }
@@ -124,27 +118,20 @@ td {
 }
 
 .outlink {
-  padding-top:6px;
 }
 
 .artist-releases {
-  padding-top:30px;
 }
 
 .td-left {
-  padding-left: 10px;
 }
 
 .td-top {
-  padding-top: 15px;
 }
 
 /* footer */
 
 
-.styled-row td {
-  padding-bottom: 15px;
-}
 
 /** 이미지 (후버) 관련 **/
 .cover-container {
@@ -190,7 +177,7 @@ td {
   }
 }
 
-/* */
+/* profile gallery*/
 
 .artist-section-profile-wrapper {
   display: flex;
@@ -201,19 +188,19 @@ td {
 .profile-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  width: 450px;
 }
 
 #profile-img-viewer {
   height: 300px;
   overflow: hidden;
-  margin-bottom: 6px;
 }
 
 #main-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:scale-down;
+  object-position: left; /* 이미지를 좌측에 정렬 */
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -221,6 +208,7 @@ td {
   display: flex;
   gap: 4px;
 }
+
 
 .profile-thumbnail {
   height: 24px;
@@ -245,10 +233,44 @@ td {
 @media (max-width: 480px) {
   #profile-img-viewer {
     height: 200px;
-    margin-bottom: 8px;
   }
 
   .profile-thumbnail {
     height: 24px;
   }
+}
+
+
+
+/**/
+.pdt-4 {
+  padding-top: 4px;
+}
+
+.pdt-8 {
+  padding-top: 8px;
+}
+
+.pdt-16 {
+  padding-top: 16px;
+}
+
+.pdt-30 {
+  padding-top: 30px;
+}
+
+.pdl-4 {
+  padding-left: 4px;
+}
+
+.pdl-8 {
+  padding-left: 8px;
+}
+
+.pdl-16 {
+  padding-left: 16px;
+}
+
+.pdb-16 td {
+  padding-bottom: 16px;
 }
