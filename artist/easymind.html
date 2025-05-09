@@ -13,34 +13,82 @@
 
 <body>
     <main class="container">
-        <div class="col-left">
+        <div class="col-a">
             <span class="logo-text">hustle muscle records</span>
         </div>
-        <div class="col-right">
+        <div class="col-b">
             <table>
                 <tr>
                     <td>
-                        <div class="cover-container">
-                            <img class="thumbnail" src="../src/img_300_b.png" alt="cf-cover">
-                            <img class="original-image" src="../src/img_300_b.png" alt="cf-cover">
+                        <div class="artist-section-profile-wrapper">
+                            <div class="profile-container" onmouseleave="resetImage()">
+                                <div id="profile-img-viewer">
+                                    <img id="main-image" src="../src/a-p-Easymind.jpg" alt="easymind-profile-1">
+                                </div>
+                                <div class="profile-thumbnail-container">
+                                    <div class="profile-thumbnail"
+                                        onmouseover="swapImage('../src/a-p-Easymind.jpg', 'profile-1')">
+                                        <img src="../src/a-p-Easymind.jpg" alt="easymind-profile-1-small">
+                                    </div>
+                                    <div class="profile-thumbnail"
+                                        onmouseover="swapImage('../src/a-p-Easymind-2.jpg', 'profile-2')">
+                                        <img src="../src/a-p-Easymind-2.jpg" alt="easymind-profile-2-small">
+                                    </div>
+                                    <div class="profile-thumbnail"
+                                        onmouseover="swapImage('../src/a-p-Easymind-4.jpeg', 'profile-3')">
+                                        <img src="../src/a-p-Easymind-4.jpeg" alt="easymind-profile-4-small">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </td>
-                    <td>
-                        <span href="./release/cf.html" class="data-href">cf (cheap food)</span>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td><span href="./artist/easymind.html" class="data-href">Easymind</span>
                     </td>
                 </tr>
                 <tr>
                     <td>
+                        Plunderphonics
                     </td>
-                    <td><span id="number-padding">by </span><span href="../artist/easymind.html"
+                </tr>
+                <tr>
+                    <td class="outlink">
+                        <span href="https://open.spotify.com/track/6TNcMPyG31TeFiJrXKsF1V?si=1262f93a83b7418f"
+                            class="data-href-outlink">(insta) ↗</span> |
+                        <span href="https://open.spotify.com/track/6TNcMPyG31TeFiJrXKsF1V?si=1262f93a83b7418f"
+                            class="data-href-outlink">(soundcloud) ↗</span>
+                    </td>
+                </tr>
+            </table>
+
+            <table class="artist-releases"">
+                <tr>
+                    <td>
+                        <div class="cover-container">
+                            <img class="thumbnail" src="../src/cf_cover.jpg" alt="cf-cover">
+                            <img class="original-image" src="../src/cf_cover.jpg" alt="cf-cover">
+                        </div>
+                    </td>
+                    <td class="td-left">
+                        <span href="./release/cf.html" class="data-href">cf (cheap food)</span>
+                    </td>
+                </tr>
+                <tr class="styled-row">
+                    <td>
+                    </td>
+                    <td class="td-left"><span>by </span><span href="../artist/easymind.html"
                             class="data-href">Easymind</span> |
-                        experimental-hiphop | <span class="time-ago" data-timestamp="2025-04-07T18:21:00+09:00"></span>
+                        Plunderphonics | <span class="time-ago" data-timestamp="2025-04-07T18:21:00+09:00"></span>
                         |
                         <span href="https://open.spotify.com/track/6TNcMPyG31TeFiJrXKsF1V?si=1262f93a83b7418f"
                             class="data-href-outlink">↗</span>
                     </td>
                 </tr>
-                </table>
+            </table>
         </div>
     </main>
     <footer class="container">

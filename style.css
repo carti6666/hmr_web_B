@@ -17,9 +17,16 @@ main {
   flex-wrap: wrap; /* 내용이 넘치면 줄바꿈 */
 }
 
-.col-left,
-.col-right {
+.col-a,
+.col-b,
+.col-c {
   padding: 20px;
+  padding-bottom: 30px;
+}
+
+.ctemp {
+  max-width: 300px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* 모바일 환경 (최대 너비 480px) */
@@ -29,14 +36,20 @@ main {
     flex-wrap: nowrap; /* 줄바꿈 방지 */
   }
 
-  .col-left {
+  .col-a {
     order: 0;
     width: 100%;
     padding: 4px;
   }
 
-  .col-right {
+  .col-b {
     order: 1;
+    width: 100%;
+    padding: 4px;
+  }
+
+  .col-c {
+    order: 2;
     width: 100%;
     padding: 4px;
   }
@@ -56,6 +69,14 @@ tr,
 td {
   padding: 0;
   margin: 0;
+}
+
+.outlink {
+  padding-top:6px;
+}
+
+.artist-releases {
+  padding-top:30px;
 }
 
 .td-left {
@@ -113,5 +134,68 @@ footer {
 @media (max-width: 480px) {
   .original-image {
     width: 200px !important;
+  }
+}
+
+/* */
+
+.artist-section-profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#profile-img-viewer {
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 6px;
+}
+
+#main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.profile-thumbnail-container {
+  display: flex;
+  gap: 4px;
+}
+
+.profile-thumbnail {
+  height: 24px;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.profile-thumbnail:hover,
+.profile-thumbnail.active {
+  opacity: 1;
+}
+
+.profile-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 모바일 스타일 */
+@media (max-width: 480px) {
+  #profile-img-viewer {
+    height: 200px;
+    margin-bottom: 8px;
+  }
+
+  .profile-thumbnail {
+    height: 24px;
   }
 }

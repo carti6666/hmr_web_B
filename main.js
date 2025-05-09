@@ -271,3 +271,85 @@ document.addEventListener("DOMContentLoaded", () => {
   updateAllTimeAgoElements();
   setInterval(updateAllTimeAgoElements, 60000); // 1분(60000ms)마다 업데이트
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mainImage = document.getElementById('main-image');
+  const thumbnails = document.querySelectorAll('.profile-thumbnail');
+  let activeThumbnail = thumbnails[0]; // 초기 활성 썸네일
+
+  function swapImage(newSrc, altText) {
+    mainImage.src = newSrc;
+    mainImage.alt = altText;
+  }
+
+  function resetImage() {
+    if (activeThumbnail && activeThumbnail.querySelector('img')) {
+      mainImage.src = activeThumbnail.querySelector('img').src;
+      mainImage.alt = activeThumbnail.querySelector('img').alt.replace('-small', '');
+    }
+  }
+
+  thumbnails.forEach(thumbnail => {
+    thumbnail.addEventListener('mouseover', () => {
+      if (activeThumbnail) {
+        activeThumbnail.classList.remove('active');
+      }
+      thumbnail.classList.add('active');
+      activeThumbnail = thumbnail;
+      const img = thumbnail.querySelector('img');
+      if (img) {
+        swapImage(img.src.replace('-small', ''), img.alt.replace('-small', ''));
+      }
+    });
+
+    // 모바일 클릭 이벤트 처리 (호버 효과 대체)
+    thumbnail.addEventListener('click', () => {
+      if (window.innerWidth <= 480) {
+        if (activeThumbnail) {
+          activeThumbnail.classList.remove('active');
+        }
+        thumbnail.classList.add('active');
+        activeThumbnail = thumbnail;
+        const img = thumbnail.querySelector('img');
+        if (img) {
+          swapImage(img.src.replace('-small', ''), img.alt.replace('-small', ''));
+        }
+      }
+    });
+  });
+
+  // 초기 이미지 설정
+  if (thumbnails.length > 0 && mainImage) {
+    thumbnails[0].classList.add('active');
+    const initialImageSrc = thumbnails[0].querySelector('img').src.replace('-small', '');
+    const initialImageAlt = thumbnails[0].querySelector('img').alt.replace('-small', '');
+    swapImage(initialImageSrc, initialImageAlt);
+  }
+
+  // onmouseleave 이벤트 핸들러 (초기 이미지로 리셋)
+  const profileContainer = document.querySelector('.profile-container');
+  if (profileContainer) {
+    profileContainer.addEventListener('mouseleave', resetImage);
+  }
+});
+
+function swapImage(newSrc, altText) {
+  const mainImage = document.getElementById('main-image');
+  if (mainImage) {
+    mainImage.src = newSrc;
+    mainImage.alt = altText;
+  }
+}
+
+function resetImage() {
+  const mainImage = document.getElementById('main-image');
+  const activeThumbnail = document.querySelector('.profile-thumbnail.active');
+  if (mainImage && activeThumbnail && activeThumbnail.querySelector('img')) {
+    mainImage.src = activeThumbnail.querySelector('img').src.replace('-small', '');
+    mainImage.alt = activeThumbnail.querySelector('img').alt.replace('-small', '');
+  } else if (mainImage && document.querySelector('.profile-thumbnail:first-child img')) {
+    mainImage.src = document.querySelector('.profile-thumbnail:first-child img').src.replace('-small', '');
+    mainImage.alt = document.querySelector('.profile-thumbnail:first-child img').alt.replace('-small', '');
+  }
+}
