@@ -17,12 +17,26 @@ main {
   flex-wrap: wrap; /* 내용이 넘치면 줄바꿈 */
 }
 
+.sub-grid {
+  display: flex;
+  margin: 0;
+  flex-direction: row; /* 기본적으로 가로 방향 배치 */
+  flex-wrap: wrap; /* 내용이 넘치면 줄바꿈 */
+}
+
 .col-a,
 .col-b,
 .col-c {
   padding: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
+
+.col-d {
+  padding: 20px;
+  padding-bottom: 20px;
+  max-width: 400px;;
+}
+
 
 .ctemp {
   max-width: 300px;
@@ -50,6 +64,12 @@ main {
 
   .col-c {
     order: 2;
+    width: 100%;
+    padding: 4px;
+  }
+
+  .col-d {
+    order: 3;
     width: 100%;
     padding: 4px;
   }
