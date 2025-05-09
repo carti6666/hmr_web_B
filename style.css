@@ -2,7 +2,7 @@
   font-size: 12px;
   font-weight: 450;
 }
-
+/*
 div,
 td,
 tr,
@@ -10,7 +10,7 @@ table,
 span {
   border: solid 0.5px;
   border-color: #000fff;
-}
+}*/
 
 body {
   font-family: "Noto Sans KR", sans-serif;
@@ -100,7 +100,7 @@ hr {
     padding: 4px;
     padding-bottom: 20px;
   }
-  
+
   .footer-container {
     padding: 4px;
   }
