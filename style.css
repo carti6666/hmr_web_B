@@ -108,8 +108,21 @@ td {
   max-height: 300px;
 }
 
-.track-numb {
-  display: inline-block;
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-position: inside;
+}
+
+td {
+  text-align: left;
+  vertical-align: top;
+}
+
+.numb {
   width: 3rem;
 }
 
