@@ -2,6 +2,12 @@
   font-size: 12px;
   font-weight: 450;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /*
 div,
 td,
@@ -158,12 +164,14 @@ td {
 .profile-container {
   display: flex;
   flex-direction: column;
-  width: 450px;
+  width: 450px; /* 데스크톱 기준 너비 */
+  max-width: 100%; /* 화면보다 클 경우를 대비 */
 }
 
 #profile-img-viewer {
   height: 300px;
   overflow: hidden;
+  width: 100%; /* 부모인 .profile-container 너비에 맞춤 */
 }
 
 #main-image {
@@ -172,22 +180,22 @@ td {
   object-fit: scale-down;
   object-position: left; /* 이미지를 좌측에 정렬 */
   transition: opacity 0.3s ease-in-out;
+  display: block; /* 이미지 하단 여백 제거 등 */
 }
 
 .profile-thumbnail-container {
   display: flex;
   gap: 4px;
-  object-position: left;
+  /* object-position: left; /* div 요소에는 부적합한 속성 */
 }
 
 .profile-thumbnail {
   height: 24px;
-  object-fit: scale-down;
   overflow: hidden;
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.3s ease-in-out;
-  object-position: left;
+  /* object-fit, object-position은 내부 img 요소에 적용 */
 }
 
 .profile-thumbnail:hover,
@@ -198,6 +206,7 @@ td {
 .profile-thumbnail img {
   height: 24px;
   object-fit: scale-down;
+  display: block; /* 이미지 하단 여백 제거 등 */
 }
 
 /* 모바일 스타일 */
@@ -239,20 +248,23 @@ td {
     width: 200px !important;
   }
 
+  .profile-container {
+    width: 100%; /* 모바일에서 화면 전체 너비 사용 */
+  }
+
   #profile-img-viewer {
     height: 200px;
   }
 
   .profile-thumbnail {
-    max-height: 24px;
-    object-fit: scale-down;
-    object-position: left;
+    height: 24px; /* 데스크톱과 동일하게 유지하거나 필요시 max-height 사용 */
+    /* div에 object-fit, object-position 불필요 */
   }
 
   .profile-thumbnail img {
-  height: 24px;
-  object-fit: scale-down;
-}
+    height: 24px; /* 이미 설정되어 있음 */
+    /* object-fit: scale-down; 이미 설정되어 있음 */
+  }
 }
 
 /**/
