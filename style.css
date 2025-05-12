@@ -65,6 +65,10 @@ hr {
   padding: 20px 0 0 20px;
 }
 
+.logo-img {
+  width: 200px;
+}
+
 .logo-text {
   color: blue;
 }
