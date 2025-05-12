@@ -220,7 +220,7 @@ td {
 
 .profile-thumbnail {
   height: 24px;
-  object-fit: contain;
+  object-fit: scale-down;
   overflow: hidden;
   cursor: pointer;
   opacity: 0.7;
@@ -235,7 +235,7 @@ td {
 .profile-thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: scale-down;
 }
 
 /* 모바일 스타일 */
@@ -246,7 +246,7 @@ td {
 
   .profile-thumbnail {
     max-height: 24px;
-    object-fit: contain;
+  object-fit: scale-down;
   }
 }
 
