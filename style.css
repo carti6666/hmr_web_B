@@ -42,8 +42,11 @@ main {
 }
 
 .col-d {
-  max-width: 400px;
   padding: 20px;
+}
+
+.mx-400 {
+  max-width: 400px;
 }
 
 .ctemp {
@@ -246,7 +249,7 @@ td {
 
   .profile-thumbnail {
     max-height: 24px;
-  object-fit: scale-down;
+    object-fit: scale-down;
   }
 }
 
