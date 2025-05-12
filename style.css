@@ -235,20 +235,20 @@ td {
   .footer-container {
     padding: 10px 4px 30px 4px;
   }
-}
 
-.original-image {
-  width: 200px !important;
-}
+  .original-image {
+    width: 200px !important;
+  }
 
-#profile-img-viewer {
-  height: 200px;
-}
+  #profile-img-viewer {
+    height: 200px;
+  }
 
-.profile-thumbnail {
-  max-height: 24px;
-  object-fit: scale-down;
-  object-position: left;
+  .profile-thumbnail {
+    max-height: 24px;
+    object-fit: scale-down;
+    object-position: left;
+  }
 }
 
 /**/
