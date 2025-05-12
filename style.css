@@ -14,7 +14,7 @@ span {
 
 body {
   font-family: "Noto Sans KR", sans-serif;
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 450;
   display: grid;
   grid-template-columns: 1fr;
