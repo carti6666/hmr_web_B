@@ -245,6 +245,7 @@ td {
 
   .profile-thumbnail {
     max-height: 24px;
+    object-fit: contain;
   }
 }
 
