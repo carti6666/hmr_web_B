@@ -196,8 +196,7 @@ td {
 }
 
 .profile-thumbnail img {
-  width: 100%;
-  height: 100%;
+  height: 24px;
   object-fit: scale-down;
 }
 
@@ -249,6 +248,11 @@ td {
     object-fit: scale-down;
     object-position: left;
   }
+
+  .profile-thumbnail img {
+  height: 24px;
+  object-fit: scale-down;
+}
 }
 
 /**/
