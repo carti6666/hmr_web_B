@@ -30,15 +30,15 @@ body {
 main {
   display: flex;
   margin: 0;
-  flex-direction: row; /* 기본적으로 가로 방향 배치 */
-  flex-wrap: wrap; /* 내용이 넘치면 줄바꿈 */
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .sub-grid {
   display: flex;
   margin: 0;
-  flex-direction: row; /* 기본적으로 가로 방향 배치 */
-  flex-wrap: wrap; /* 내용이 넘치면 줄바꿈 */
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .col-a,
@@ -164,8 +164,8 @@ td {
 .profile-container {
   display: flex;
   flex-direction: column;
-  width: 450px; /* 데스크톱 기준 너비 */
-  max-width: 100%; /* 화면보다 클 경우를 대비 */
+  width: 450px;
+  max-width: 100%;
 }
 
 #profile-img-viewer {
@@ -207,6 +207,10 @@ td {
   height: 24px;
   object-fit: scale-down;
   display: block; /* 이미지 하단 여백 제거 등 */
+}
+
+.mx-479 {
+  max-width: 479px;
 }
 
 /* 모바일 스타일 */
