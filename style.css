@@ -69,42 +69,6 @@ hr {
   padding: 20px 0 0 20px;
 }
 
-/* 모바일 환경 (최대 너비 480px) */
-@media (max-width: 480px) {
-  main {
-    flex-direction: column; /* 모바일에서 세로 방향 배치 */
-    flex-wrap: nowrap; /* 줄바꿈 방지 */
-  }
-
-  .col-a {
-    order: 0;
-    width: 100%;
-    padding: 10px 4px 30px 4px;
-  }
-
-  .col-b {
-    order: 1;
-    width: 100%;
-    padding: 10px 4px 30px 4px;
-  }
-
-  .col-c {
-    order: 2;
-    width: 100%;
-    padding: 10px 4px 30px 4px;
-  }
-
-  .col-d {
-    order: 3;
-    width: 100%;
-    padding: 10px 4px 30px 4px;
-  }
-
-  .footer-container {
-    padding: 10px 4px 30px 4px;
-  }
-}
-
 .logo-text {
   color: blue;
 }
@@ -183,12 +147,6 @@ td {
   }
 }
 
-@media (max-width: 480px) {
-  .original-image {
-    width: 200px !important;
-  }
-}
-
 /* profile gallery*/
 
 .artist-section-profile-wrapper {
@@ -219,6 +177,7 @@ td {
 .profile-thumbnail-container {
   display: flex;
   gap: 4px;
+  object-position: left;
 }
 
 .profile-thumbnail {
@@ -228,6 +187,7 @@ td {
   cursor: pointer;
   opacity: 0.7;
   transition: opacity 0.3s ease-in-out;
+  object-position: left;
 }
 
 .profile-thumbnail:hover,
@@ -243,14 +203,52 @@ td {
 
 /* 모바일 스타일 */
 @media (max-width: 480px) {
-  #profile-img-viewer {
-    height: 200px;
+  main {
+    flex-direction: column; /* 모바일에서 세로 방향 배치 */
+    flex-wrap: nowrap; /* 줄바꿈 방지 */
   }
 
-  .profile-thumbnail {
-    max-height: 24px;
-    object-fit: scale-down;
+  .col-a {
+    order: 0;
+    width: 100%;
+    padding: 10px 4px 30px 4px;
   }
+
+  .col-b {
+    order: 1;
+    width: 100%;
+    padding: 10px 4px 30px 4px;
+  }
+
+  .col-c {
+    order: 2;
+    width: 100%;
+    padding: 10px 4px 30px 4px;
+  }
+
+  .col-d {
+    order: 3;
+    width: 100%;
+    padding: 10px 4px 30px 4px;
+  }
+
+  .footer-container {
+    padding: 10px 4px 30px 4px;
+  }
+}
+
+.original-image {
+  width: 200px !important;
+}
+
+#profile-img-viewer {
+  height: 200px;
+}
+
+.profile-thumbnail {
+  max-height: 24px;
+  object-fit: scale-down;
+  object-position: left;
 }
 
 /**/
