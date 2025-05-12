@@ -82,23 +82,23 @@ hr {
   .col-b {
     order: 1;
     width: 100%;
-    padding: 10px 4px 5px 4px;
+    padding: 10px 4px 30px 4px;
   }
 
   .col-c {
     order: 2;
     width: 100%;
-    padding: 10px 4px 5px 4px;
+    padding: 10px 4px 30px 4px;
   }
 
   .col-d {
     order: 3;
     width: 100%;
-    padding: 10px 4px 5px 4px;
+    padding: 10px 4px 30px 4px;
   }
 
   .footer-container {
-    padding: 10px 4px 5px 4px;
+    padding: 10px 4px 30px 4px;
   }
 }
 
@@ -220,6 +220,7 @@ td {
 
 .profile-thumbnail {
   height: 24px;
+  object-fit: contain;
   overflow: hidden;
   cursor: pointer;
   opacity: 0.7;
@@ -234,7 +235,7 @@ td {
 .profile-thumbnail img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* 모바일 스타일 */
