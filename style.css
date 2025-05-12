@@ -8,16 +8,6 @@
   box-sizing: border-box;
 }
 
-/*
-div,
-td,
-tr,
-table,
-span {
-  border: solid 0.5px;
-  border-color: #000fff;
-}*/
-
 body {
   font-family: "Noto Sans KR", sans-serif;
   font-size: 1rem;

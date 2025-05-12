@@ -177,55 +177,26 @@ function initializeDataHrefLinks() {
 const KOR_SECONDS_IN_MINUTE = 60;
 const KOR_SECONDS_IN_HOUR = KOR_SECONDS_IN_MINUTE * 60;
 const KOR_SECONDS_IN_DAY = KOR_SECONDS_IN_HOUR * 24;
-const KOR_SECONDS_IN_MONTH_APPROX = KOR_SECONDS_IN_DAY * 30; // 월 평균 일수 근사치
-const KOR_SECONDS_IN_YEAR_APPROX = KOR_SECONDS_IN_DAY * 365; // 연 평균 일수 근사치
 
 function timeAgo(timestamp) {
   const now = new Date();
   const past = new Date(timestamp);
   const diffInSeconds = Math.floor((now - past) / 1000);
+  const diffInDays = Math.round(diffInSeconds / KOR_SECONDS_IN_DAY);
 
-  if (isNaN(diffInSeconds)) {
-    return "유효하지 않은 날짜";
-  }
-
-  if (diffInSeconds < 0) {
-    // 미래 시간 처리
-    const futureDiff = Math.abs(diffInSeconds);
-    if (futureDiff < KOR_SECONDS_IN_MINUTE) return `${futureDiff}초 후`;
-    if (futureDiff < KOR_SECONDS_IN_HOUR)
-      return `${Math.floor(futureDiff / KOR_SECONDS_IN_MINUTE)}분 후`;
-    // 필요시 시간, 일 단위 미래 표시 추가
-    return "미래";
+  if (isNaN(diffInDays)) {
+    return "Invalid Date";
   }
 
-  if (diffInSeconds < 5) {
-    // 매우 짧은 시간은 "방금 전"으로 표시
-    return "방금 전";
+  if (diffInDays === 0) {
+    return "Today";
   }
-  if (diffInSeconds < KOR_SECONDS_IN_MINUTE) {
-    return `${diffInSeconds}seconds ago`;
+
+  if (diffInDays < 0) {
+    return `<span style="color: #000fff;">${Math.abs(diffInDays)} days left</span>`;
+  } else {
+    return `${diffInDays} days ago`;
   }
-  if (diffInSeconds < KOR_SECONDS_IN_HOUR) {
-    const diffInMinutes = Math.floor(diffInSeconds / KOR_SECONDS_IN_MINUTE);
-    return `${diffInMinutes}minutes ago`;
-  }
-  if (diffInSeconds < KOR_SECONDS_IN_DAY) {
-    const diffInHours = Math.floor(diffInSeconds / KOR_SECONDS_IN_HOUR);
-    return `${diffInHours}hours ago`;
-  }
-  if (diffInSeconds < KOR_SECONDS_IN_MONTH_APPROX) {
-    const diffInDays = Math.floor(diffInSeconds / KOR_SECONDS_IN_DAY);
-    return `${diffInDays}days ago`;
-  }
-  if (diffInSeconds < KOR_SECONDS_IN_YEAR_APPROX) {
-    const diffInMonths = Math.floor(
-      diffInSeconds / KOR_SECONDS_IN_MONTH_APPROX
-    );
-    return `${diffInMonths}months ago`;
-  }
-  const diffInYears = Math.floor(diffInSeconds / KOR_SECONDS_IN_YEAR_APPROX);
-  return `${diffInYears}years ago`;
 }
 
 function updateAllTimeAgoElements() {
@@ -233,7 +204,7 @@ function updateAllTimeAgoElements() {
   timeAgoElements.forEach((element) => {
     const timestamp = element.dataset.timestamp;
     if (timestamp) {
-      element.textContent = timeAgo(timestamp);
+      element.innerHTML = timeAgo(timestamp); // textContent 대신 innerHTML 사용
     } else {
       // console.warn("'.time-ago' 요소에 'data-timestamp' 속성이 없습니다:", element);
     }
