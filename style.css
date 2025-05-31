@@ -56,11 +56,21 @@ nav a.active {
 
 
 /* main */
+main {
+  border-top: 1px solid green;
+  padding-top: 1rem;
+}
+
 .main-vph {
   min-height: calc(100vh - 50rem);
 }
 
 /* footer */
+footer {
+  border-top: 1px solid green;
+  padding-top: 3rem;
+}
+
 #sns-links li a {
   text-decoration: underline rgb(194, 194, 194);
   color: black;
