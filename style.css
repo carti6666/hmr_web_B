@@ -57,7 +57,7 @@ nav a.active {
 
 /* main */
 .main-vph {
-  min-height: calc(100svh - 50rem);
+  min-height: calc(100vh - 50rem);
 }
 
 /* footer */
