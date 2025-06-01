@@ -77,11 +77,10 @@ main {
 /* footer */
 footer {
   padding-top: 3rem;
-  justify-content: space-between;
 }
 
 footer img {
-  max-width: 123.27px;
+  max-width: 70px;
 }
 
 #sns-links li a {
