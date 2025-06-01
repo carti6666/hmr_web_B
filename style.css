@@ -47,6 +47,9 @@ a {
 }
 
 /* nav */
+nav ul{
+  align-items: center;
+}
 
 nav a {
   text-decoration: none;
@@ -55,13 +58,16 @@ nav a {
 }
 
 nav a:hover {
-  background-color: green;
-  height: 1px;
+  text-decoration: overline;
+  text-decoration-color: green;
+  text-decoration-thickness: 1px;
+  background-color: rgba(0, 128, 0, 0.65);
 }
 
 nav a.active {
-  background-color: green;
-  height: 1px;
+  text-decoration: overline;
+  text-decoration-color: green;
+  text-decoration-thickness: 1px;
 }
 
 
