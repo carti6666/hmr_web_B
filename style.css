@@ -1,5 +1,14 @@
 :root {
-  font-size: 12px;
+  font-size: 10px;
+}
+
+body {
+  max-width: 480px;
+}
+
+header svg {
+  width: 15px;
+  height: 15px;
 }
 
 /* tag-spacing */
@@ -7,7 +16,8 @@ li,
 ul,
 table,
 tr,
-td {
+td,
+p {
   padding: 0;
   margin: 0;
   border-spacing: 0;
@@ -57,7 +67,6 @@ nav a.active {
 
 /* main */
 main {
-  border-top: 1px solid green;
   padding-top: 1rem;
 }
 
@@ -67,12 +76,12 @@ main {
 
 /* footer */
 footer {
-  border-top: 1px solid green;
   padding-top: 3rem;
+  justify-content: space-between;
 }
 
 footer img {
-  max-width: (150px + 1rem);
+  max-width: 123.27px;
 }
 
 #sns-links li a {
@@ -197,4 +206,8 @@ figure img {
 .overlay-text p {
   margin: 0;
   padding: 0;
+}
+
+#head {
+  color: gray;
 }
