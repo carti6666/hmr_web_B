@@ -1,5 +1,6 @@
 /* system */
 :root {
+<<<<<<< HEAD
   font-size: 14px;
 }
 
@@ -13,12 +14,164 @@ main {
 }
 
 a {
+=======
+  font-size: 10px;
+}
+
+body {
+  max-width: 480px;
+}
+
+header svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* tag-spacing */
+li,
+ul,
+table,
+tr,
+td,
+p {
+  padding: 0;
+  margin: 0;
+  border-spacing: 0;
+}
+
+/* a */
+a {
+  display: block;
+}
+
+/* li */
+.li-style-none {
+  list-style: none;
+}
+
+/* flex */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+/* nav */
+nav ul{
+  align-items: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: overline;
+  text-decoration-color: green;
+  text-decoration-thickness: 1px;
+  background-color: rgba(0, 128, 0, 0.65);
+}
+
+nav a.active {
+  text-decoration: overline;
+  text-decoration-color: green;
+  text-decoration-thickness: 1px;
+}
+
+
+/* main */
+main {
+  padding-top: 1rem;
+}
+
+.main-vph {
+  min-height: calc(100vh - 50rem);
+}
+
+/* footer */
+footer {
+  padding-top: 3rem;
+}
+
+footer img {
+  max-width: 70px;
+}
+
+#sns-links li a {
+  text-decoration: underline rgb(194, 194, 194);
+  color: black;
+}
+
+#sns-links li a:hover {
+  text-decoration: underline rgb(194, 194, 194);
+  color: gray;
+}
+
+/* releases-list */
+
+#releases-lists-info a {
+  text-decoration: none;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#releases-lists-info a:hover {
+  text-decoration: underline gray;
+  color: gray;
+}
+
+#release-sub-info {
+  color: gray;
+}
+
+#releases-list tr:not(:last-child) td {
+  padding-bottom: 1rem;
+}
+
+/* cover-thumbnail-image */
+
+.cover-container {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  vertical-align: bottom;
+}
+
+.thumbnail {
+  width: 28px;
+  height: auto;
+  cursor: pointer;
+}
+
+.original-image {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  z-index: 10;
+  top: 100%;
+  transform: translate(11%, 1%);
+}
+
+.cover-container.active .original-image {
+>>>>>>> b211c2bf35bcba9f06119bf19e5dfc56a24fa9ce
   display: block;
   text-decoration: none;
   color: black;
 }
 
 
+<<<<<<< HEAD
 /* assets*/
 
 .flex {
@@ -69,3 +222,64 @@ footer img {
 #sns-links li:not(:last-child) a {
   color: gray;
 }
+=======
+/* figure - artists */
+
+figure {
+  display: block;
+  margin: 0;
+  max-width: 16rem;
+}
+
+figcaption {
+background-color: black;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* 이미지 아래 불필요한 여백 제거 */
+  margin: 0 auto; /* 이미지를 figure 가운데로 정렬 */
+}
+
+#a {
+  padding-left: 0.3rem;
+  padding-right: 0.5rem;
+  background-color: white;
+}
+
+/* 부모 컨테이너: 기준점 역할 */
+.artist-thumb-container {
+  position: relative;
+  width: 21rem;
+  height: auto;
+  overflow: hidden;
+}
+
+.background-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay-text {
+  position: absolute;
+  background-color: white;
+  color: black;
+  padding-top: 0.1rem;
+  padding-left: 0.3rem;
+  padding-right: 0.5rem;
+  bottom: 0;
+  left: 0; 
+}
+
+.overlay-text p {
+  margin: 0;
+  padding: 0;
+}
+
+#head {
+  color: gray;
+}
+>>>>>>> b211c2bf35bcba9f06119bf19e5dfc56a24fa9ce

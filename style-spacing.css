@@ -1,13 +1,37 @@
+<<<<<<< HEAD
+=======
+.pd-3 {
+  padding: 3rem;
+}
+
+>>>>>>> b211c2bf35bcba9f06119bf19e5dfc56a24fa9ce
 .pd-1 {
   padding: 1rem;
 }
 
+<<<<<<< HEAD
 .pdb-1 {
   padding-bottom: 1rem;
 }
 
 .pdb-3 {
   padding-bottom: 3rem;
+=======
+.pdl-05 {
+  padding-left: 0.5rem;
+}
+
+.pdl-1 {
+  padding-left: 1rem;
+}
+
+.pdb-8 {
+  padding-bottom: 8rem;
+}
+
+.pdt-1 {
+  padding-top: 1rem;
+>>>>>>> b211c2bf35bcba9f06119bf19e5dfc56a24fa9ce
 }
 
 .pdt-3 {
@@ -18,6 +42,24 @@
   gap: 1rem;
 }
 
+<<<<<<< HEAD
 .gap-3 {
   gap: 3rem;
 }
+=======
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}
+
+.align-bottom {
+  vertical-align: bottom;
+}
+
+.align-top {
+  vertical-align: top;
+}
+>>>>>>> b211c2bf35bcba9f06119bf19e5dfc56a24fa9ce
