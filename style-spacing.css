@@ -1,0 +1,23 @@
+.pd-1 {
+  padding: 1rem;
+}
+
+.pdb-1 {
+  padding-bottom: 1rem;
+}
+
+.pdb-3 {
+  padding-bottom: 3rem;
+}
+
+.pdt-3 {
+  padding-top: 3rem;
+}
+
+.gap-1 {
+  gap: 1rem;
+}
+
+.gap-3 {
+  gap: 3rem;
+}

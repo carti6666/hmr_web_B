@@ -1,81 +1,71 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>hmr</title>
-    <link href='./style.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hustle muscle records</title>
+
+    <link rel="icon" href="./src/assets/" type="image/x-icon">
+    <link rel="shortcut icon" href="./src/assets/16.png" type="image/x-icon">
+    <link rel="icon" href="./src/assets/32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="./src/assets/16.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/assets/16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/32.png">
+    <link rel="manifest" href="#">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style-spacing.css">
+
 </head>
 
 <body>
-    <main class="container">
-        <div class="col-a logo-text">
-            <span href="./index.html" class="data-href">hustle muscle records</span>
-        </div>
-        <div class="col-b">
-            <table>
-                <tr>
-                    <td>
-                        <div class="cover-container">
-                            <img class="thumbnail" src="./src/cf_cover.jpg" alt="cf-cover">
-                            <img class="original-image" src="./src/cf_cover.jpg" alt="cf-cover">
-                        </div>
-                    </td>
-                    <td class="pdl-16">
-                        <span href="./release/cf.html" class="data-href">cf (cheap food)</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                    </td>
-                    <td class="pdl-16 pdb-16"><span>by </span><span href="./artist/easymind.html"
-                            class="data-href">Easymind</span> |
-                        Plunderphonics | <span class="time-ago" data-timestamp="2025-09-07T18:21:00+09:00"></span>
-                    </td>
-                </tr>
+    <header class="pdb-3">
+        <nav>
+            <ul class="flex flex-row gap-1">
+                <li>
+                    <a href="#"><img id="icon" src="./src/assets/icon.svg"></a>
+                </li>
+                <li>
+                    <a href="./index.html" class="active">releases</a>
+                </li>
+                <li>
+                    <a href="./index.html">artists</a>
+                </li>
+                <li>
+                    <a href="./index.html">info</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-                <td>
-                    <div class="pdb-16"></div>
-                </td>
-
-                <tr>
-                    <td>
-                        <div class="cover-container">
-                            <img class="thumbnail" src="./src/seoulrep_cover.jpg" alt="cf-cover">
-                            <img class="original-image" src="./src/seoulrep_cover.jpg" alt="cf-cover">
-                        </div>
-                    </td>
-                    <td class="pdl-16">
-                        <span href="./release/seoulrep(2022).html" class="data-href">s e o u l r e p ( 2 0 2 2 )</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                    </td>
-                    <td class="pdl-16 pdb-16"><span>by </span><span href="./artist/ccr.html" class="data-href">ccr</span>
-                        |
-                        hip-hop | <span class="time-ago" data-timestamp="2024-12-12T18:21:00+09:00"></span>
-                        |
-                        <span href="https://open.spotify.com/track/6TNcMPyG31TeFiJrXKsF1V?si=1262f93a83b7418f"
-                            class="data-href-outlink">↗</span>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
+    <main>
+        main
     </main>
-    <footer class="footer-container">
+    <footer class="flex flex-row gap-3 pdt-3">
+        <ul id="sns-links">
+            <li>
+                <a href="">e-mail</a>
+            </li>
+            <li>
+                <a href="">bandcamp</a>
+            </li>
+            <li class="pdb-1">
+                <a href="">instagram</a>
+            </li>
+            <li>
+                <p>hustle muscle records</p>
+            </li>
+        </ul>
         <div>
-            <span href="./pages/guidelines.html" class="data-href">Guidelines</span> | <span href="./pages/contact.html"
-                class="data-href">Contact</span>
+            <img src="./src/assets/180.png">
         </div>
     </footer>
-
+    <script src="./main.js"></script>
 </body>
-<script defer type="text/javascript" src="./main.js"></script>
+
 
 </html>
