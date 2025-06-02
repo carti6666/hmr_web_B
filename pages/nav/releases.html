@@ -23,14 +23,14 @@
 </category>
 
 <body>
-    <header class="pdb-3">
+    <header class="pdb-4">
         <nav>
-            <ul class="flex flex-row gap-1">
+            <ul class="flex flex-row gap-a">
                 <li>
-                    <a href="#"><img id="icon" src="../../src/assets/icon.svg"></a>
+                    <a href="../../index.html"><img id="icon" src="../../src/assets/icon.svg"></a>
                 </li>
                 <li>
-                    <a href="../../index.html" class="active">releases</a>
+                    <a href="./releases.html" class="active">releases</a>
                 </li>
                 <li>
                     <a href="../../index.html">artists</a>
@@ -43,15 +43,46 @@
     </header>
 
     <main>
-        <div id="release-list-wrapper flex felx-row">
-            <img id="release-thumbnail" src="../../src/img/img_300.png" <div>
-            <span id="category">TITLE </span><span>(UNNOCK/CF) </span>
-            <span id="category">ARTIST </span><span>Easymind </span>
-            <span id="category">LENGTH </span><span>15tracks </span>
-            <span id="category">GENRE </span><span>hiphop </span>
-            <span id="category"> </span><span id="release-date" data-date="2025-09-05"></span>
+        <div class="release-card-wrapper flex flex-col">
+
+        <div id="release-card" class="flex flex-row">
+            <div class="cover-container pdr-1">
+                <img class="thumbnail" src="../../src/img/img_300.png" alt="cf-cover">
+                <img class="original-image" src="../../src/img/img_300_b.png" alt="cf-cover">
+            </div>
+            <div id="release-info" class="flex">
+                <div>
+                    <span class="release-category">ALBUM</span><span>(UNNOCK/CF)</span><span
+                        class="release-category">ARTIST</span><span>Easymind</span>
+                </div>
+                <div>
+                    <span class="release-category">GENRE</span><span>hip-hop</span><span
+                        class="release-category">LENGTH</span><span>15tracks</span><span
+                        class="release-category"></span><span></span>
+                </div>
+            </div>
         </div>
+
+        <div id="release-card" class="flex flex-row">
+            <div class="cover-container pdr-1">
+                <img class="thumbnail" src="../../src/img/img_300.png" alt="cf-cover">
+                <img class="original-image" src="../../src/img/img_300_b.png" alt="cf-cover">
+            </div>
+            <div id="release-info" class="flex">
+                <div>
+                    <span class="release-category">ALBUM</span><span>(UNNOCK/CF)</span><span
+                        class="release-category">ARTIST</span><span>Easymind</span>
+                </div>
+                <div>
+                    <span class="release-category">GENRE</span><span>hip-hop</span><span
+                        class="release-category">LENGTH</span><span>15tracks</span><span
+                        class="release-category"></span><span></span>
+                </div>
+            </div>
         </div>
+
+        </div>
+
     </main>
     <footer class="flex flex-row gap-3 pdt-3">
         <ul id="sns-links">

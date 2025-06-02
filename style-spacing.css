@@ -2,6 +2,14 @@
   padding: 1rem;
 }
 
+.pdr-05 {
+  padding-right: 0.5rem;
+}
+
+.pdr-1 {
+  padding-right: 1rem;
+}
+
 .pdb-1 {
   padding-bottom: 1rem;
 }
@@ -10,12 +18,29 @@
   padding-bottom: 3rem;
 }
 
+.pdb-4 {
+  padding-bottom: 4rem;
+}
+
 .pdt-3 {
   padding-top: 3rem;
 }
 
+.gap-05 {
+  gap: 0.5rem;
+}
+
+
 .gap-1 {
   gap: 1rem;
+}
+
+.gap-2 {
+  gap: 2rem;
+}
+
+.gap-a {
+  gap: 0.9rem;
 }
 
 .gap-3 {

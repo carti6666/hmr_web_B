@@ -15,13 +15,16 @@ body {
 
 main {
   height: calc(100vh - 20rem);
-  background-color: beige;
 }
 
 a {
   display: block;
   text-decoration: none;
   color: black;
+}
+
+span {
+  display: inline-block;
 }
 
 /* assets*/
@@ -44,9 +47,11 @@ header nav ul {
 }
 
 #icon {
+  position: relative;
   width: 1.18rem;
   width: 1.18rem;
   vertical-align: bottom;
+  left: -0.1rem;
 }
 
 header a:hover {
@@ -63,15 +68,56 @@ header a.active {
 }
 
 /* main-release */
-#category {
-  color: gray;
-  text-transform: uppercase;
+.release-card-wrapper {
+  gap: 1rem;
 }
 
-#release-thumbnail {
+@media (max-width: 600px) {
+  .release-card-wrapper {
+    gap: 2rem;
+  }
+}
+
+/** 이미지 (후버) 관련 **/
+.cover-container {
+  position: relative;
   display: inline-block;
-  vertical-align: bottom;
-  width: 1.18rem;
+  line-height: 0;
+}
+
+.thumbnail {
+  width: 1rem;
+  height: auto;
+  cursor: pointer;
+}
+
+.original-image {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: auto;
+  border: none;
+  box-shadow: none;
+  z-index: 10;
+  top: 100%;
+  transform: translate(2rem, 0);
+}
+
+/* PC 환경에서 호버 시 원본 이미지 표시 */
+@media (hover: hover) {
+  .cover-container:hover .original-image {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .original-image {
+    width: 200px !important;
+  }
+
+  .thumbnail {
+    width: 2rem;
+  }
 }
 
 /* footer */
@@ -86,4 +132,24 @@ footer img {
 #out-link {
   padding-left: 0.2rem;
   font-size: 0.8rem;
+}
+
+#release-info {
+  flex-direction: row;
+  position: relative;
+  top: 0.1rem;
+}
+
+#release-info span {
+  padding-right: 0.3rem;
+}
+
+@media (max-width: 600px) {
+  #release-info {
+    flex-direction: column;
+  }
+}
+
+.release-category {
+  color: gray;
 }
