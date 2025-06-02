@@ -139,14 +139,15 @@ header a.active {
   }
 }
 
-/* .cover-container에 .is-active 클래스가 있을 때 original-image 보이기 */
-.cover-container.is-active .original-image {
-    display: block;
+/* artists */
+
+.artist-head {
+  width: 10rem;
 }
 
-/* .cover-container에 .is-active 클래스가 있을 때 thumbnail 숨기기 (선택 사항) */
-.cover-container.is-active .thumbnail {
-    display: none;
+#artist-card a {
+  text-decoration: underline;
+  text-decoration-color: rgb(188, 188, 188)
 }
 
 /* footer */
